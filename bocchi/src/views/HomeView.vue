@@ -3,12 +3,13 @@
 -->
 
 <script setup>
-import Header from '@/components/Header.vue';
-import CharacterInfo from '@/components/CharacterInfo.vue';
+import Header from 'https://shiomi.xyz/bocchi/src/components
+/Header.vue';
+import CharacterInfo from 'https://shiomi.xyz/bocchi/src/components/CharacterInfo.vue';
 import { onMounted, ref } from 'vue';
-import About from '@/components/About.vue';
-import MusicPlayer from '@/components/MusicPlayer.vue';
-import Photos from '../components/Photos.vue';
+import About from 'https://shiomi.xyz/bocchi/src/components/About.vue';
+import MusicPlayer from 'https://shiomi.xyz/bocchi/src/components/MusicPlayer.vue';
+import Photos from 'https://shiomi.xyz/bocchi/src/components/Photos.vue';
 
 const scrollContainer = ref(null);
 const isScrolling = ref(false); // 变成响应式
@@ -85,13 +86,13 @@ onMounted(() => {
     <section id="section1" class="scroll-page">
       <div class="video-background-container">
         <video autoplay loop muted playsinline class="video-background">
-          <source src="/assets/videos/video_和服.mp4" type="video/mp4" />
+          <source src="https://shiomi.xyz/bocchi/public/assets/videos/video_和服.mp4" type="video/mp4" />
           视频加载失败
         </video>
       </div>
 
       <div class="title-container">
-        <img src="/assets/images/logo_movie_cn.png"/>
+        <img src="https://shiomi.xyz/bocchi/public/assets/images/logo_movie_cn.png"/>
       </div>
     </section>
 
