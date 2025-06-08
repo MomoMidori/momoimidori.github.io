@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
-import 'bocchi/src/style.css'
-import App from 'bocchi/src/App.vue'
-import router from 'bocchi/src/router/index'
+import './style.css'
+import App from './App.vue'
+import router from './router/index'
 
 const app = createApp(App)
 app.use(router)
