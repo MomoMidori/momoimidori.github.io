@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import LoginImage1 from '/assets/images/LoginImage1.jpg'
+import LoginImage1 from '/bocchi/assets/images/LoginImage1.jpg'
 import Login from '../views/LoginView.vue'
 
 const images = [
