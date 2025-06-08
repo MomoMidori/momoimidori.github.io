@@ -9,9 +9,9 @@ import { Icon } from '@iconify/vue'
 
 // 原始背景图片集
 const originalImages = [
-    { url: '/assets/images/LoginImage1.jpg' },
-    { url: '/assets/images/LoginImage2.jpg' },
-    { url: '/assets/images/LoginImage3.jpg' },
+    { url: '/bocchi/assets/images/LoginImage1.jpg' },
+    { url: '/bocchi/assets/images/LoginImage2.jpg' },
+    { url: '/bocchi/assets/images/LoginImage3.jpg' },
 ]
 
 const extendedImages = ref([
@@ -40,12 +40,12 @@ const submitForm = () => {
 
 // target图片换位 + 动画
 const targetImage = [
-    { url: '/assets/images/target-image1.png' },
-    { url: '/assets/images/target-image2.png' },
-    { url: '/assets/images/target-image3.png' },
-    { url: '/assets/images/target-image4.png' },
-    { url: '/assets/images/target-image5.png' },
-    { url: '/assets/images/target-image6.png' },
+    { url: '/bocchi/assets/images/target-image1.png' },
+    { url: '/bocchi/assets/images/target-image2.png' },
+    { url: '/bocchi/assets/images/target-image3.png' },
+    { url: '/bocchi/assets/images/target-image4.png' },
+    { url: '/bocchi/assets/images/target-image5.png' },
+    { url: '/bocchi/assets/images/target-image6.png' },
 ]
 
 const target_i = ref(0);
