@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You are an MidiShow!!!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img src="jbj.gif" alt="jbj" id="jbjImage">
+    <audio id="bgMusic" loop>
+        <source src="show.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // 检查窗口是否最大化并还原
+        function checkAndRestoreWindow() {
+            if (window.outerWidth === screen.availWidth && 
+                window.outerHeight === screen.availHeight) {
+                moveWindowRandomly();
+            }
+        }
+
+        // 随机移动窗口（增强版）
+        function moveWindowRandomly() {
+            // 随机窗口大小 (800-1000 x 600-800)
+            const width = 800 + Math.random() * 200;
+            const height = 600 + Math.random() * 200;
+            
+            // 计算随机位置
+            const maxX = screen.availWidth - width;
+            const maxY = screen.availHeight - height;
+            const newX = Math.floor(Math.random() * maxX);
+            const newY = Math.floor(Math.random() * maxY);
+            
+            // 应用新尺寸和位置
+            window.resizeTo(width, height);
+            window.moveTo(newX, newY);
+            
+            // 60%概率添加随机偏移（飘动效果）
+            if (Math.random() > 0.4) {
+                window.moveBy(
+                    Math.floor(Math.random() * 40) - 20,
+                    Math.floor(Math.random() * 40) - 20
+                );
+            }
+        }
+
+        // 阻止关闭窗口
+        function preventClosing(e) {
+            e.preventDefault();
+            e.returnValue = '';
+            moveWindowRandomly();
+            return "你不能关闭这个窗口！";
+        }
+
+        // 初始化音乐播放（需要用户交互）
+        function setupMusic() {
+            const bgMusic = document.getElementById('bgMusic');
+            bgMusic.volume = 0.5;
+            
+            function playMusic() {
+                bgMusic.play().catch(e => {
+                    console.log("音乐播放被阻止:", e);
+                });
+                // 移除事件监听（只需一次交互）
+                document.removeEventListener('click', playMusic);
+                document.removeEventListener('keydown', playMusic);
+                document.removeEventListener('mousemove', playMusic);
+            }
+            
+            // 需要用户交互后才能播放
+            document.addEventListener('click', playMusic);
+            document.addEventListener('keydown', playMusic);
+            document.addEventListener('mousemove', playMusic);
+        }
+
+        // HTTPS强制跳转
+        function enforceHTTPS() {
+            if (window.location.protocol === 'http:') {
+                const httpsURL = 'https://' + 
+                                window.location.host + 
+                                window.location.pathname + 
+                                window.location.search + 
+                                window.location.hash;
+                window.location.href = httpsURL;
+            }
+        }
+
+        // 页面加载完成后初始化
+        window.onload = function() {
+            // 初始窗口位置
+            moveWindowRandomly();
+            
+            // 每300ms检查窗口状态
+            setInterval(() => {
+                checkAndRestoreWindow();
+                // 60%概率移动窗口
+                if (Math.random() > 0.4) {
+                    moveWindowRandomly();
+                }
+            }, 300);
+            
+            // 阻止关闭
+            window.addEventListener('beforeunload', preventClosing);
+            
+            // 禁用右键菜单
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                moveWindowRandomly();
+            });
+            
+            // 设置音乐
+            setupMusic();
+            
+            // 强制HTTPS
+            enforceHTTPS();
+        };
+    </script>
+</body>
+</html>
