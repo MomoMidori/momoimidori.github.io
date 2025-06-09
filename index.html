@@ -1,11 +1,202 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
+    <title>呀吼，欢迎访问我的主页！</title>
+    <style>
+        :root {
+            --glass-blur: 20px;
+            --glass-opacity: 0.5;
+        }
+
+        body {
+            margin: 0;
+            padding: 0 0 60px; 
+            min-height: 100vh;
+            font-family: "Microsoft YaHei", sans-serif;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        @media (min-width: 768px) {
+            body { background-image: url('pc_background.jpg'); }
+        }
+        @media (max-width: 767px) {
+            body { background-image: url('mobile_background.jpg'); }
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(var(--glass-blur));
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            z-index: -1;
+        }
+
+        .banner {
+            position: relative; 
+            width: 100%;
+            padding: 1rem 0;
+            background: rgba(0, 0, 0, var(--glass-opacity));
+            backdrop-filter: blur(var(--glass-blur));
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            text-align: center;
+            z-index: 1;
+        }
+
+        .banner h1 {
+            margin: 0;
+            color: white;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
+        }
+
+        .banner p {
+            margin: 0.5rem 0 0;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .grid-container {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .glass-btn {
+            position: relative;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, var(--glass-opacity));
+            backdrop-filter: blur(var(--glass-blur));
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .glass-btn:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-btn::after {
+            content: attr(data-desc);
+            position: absolute;
+            bottom: -30%;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0,0,0,0.7);
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .glass-btn:hover::after {
+            bottom: 0;
+            opacity: 1;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, var(--glass-opacity));
+            backdrop-filter: blur(var(--glass-blur));
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            .banner h1 { 
+                font-size: 1.5rem;
+                padding: 0 1rem;
+            }
+            .banner p { 
+                font-size: 0.8rem;
+                padding: 0 1rem;
+            }
+            .glass-btn {
+                padding: 1rem;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+  if (window.location.protocol === 'http:') {
+    var httpsUrl = 'https://' + window.location.host + window.location.pathname + window.location.search + window.location.hash;
+    window.location.href = httpsUrl;
+  }
+</script>
+    <script>
+document.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A' && e.target.hasAttribute('download')) {
+        e.preventDefault();
+        window.location.href = '/copy_guard.txt';
+    }
+});
+</script>
 </head>
 <body>
-    <h1>Coming Soon...</h1>
+    <header class="banner">
+        <h1>欢迎来到我的小窝！</h1>
+        <p>如你所见，因不可抗力，原网址的功能即将转移到这里。如有需要，请访问原来的网址(otomad.me)。这里目前暂时什么都没有</p>
+    </header>
+
+    </header>
+
+    <div class="grid-container">
+        <a href="https://shiomi.xyz/otto2048/" target="_blank" class="glass-btn" data-desc="otto版本的2048，在每一个数字被合成后，会播放爽口的鬼叫111(通关后有跳脸还请注意)">
+            合成大硅胶
+        </a>
+        <a href="https://shiomi.xyz/glff/" target="_blank" class="glass-btn" data-desc="将任何一段话翻译成盖伦发发语">
+            盖伦发发翻译器
+        </a>
+        <a href="https://shiomi.xyz/sddl/" target="_blank" class="glass-btn" data-desc="上传图片，即时将人像说的道理化">
+            说的道理生成器
+        </a>
+        <a href="https://shiomi.xyz/billy/" target="_blank" class="glass-btn" data-desc="点击任意按钮，播放哲♂学语录">
+            哲学♂盒
+        </a>
+        <a href="https://shiomi.xyz/pic/" target="_blank" class="glass-btn" data-desc="将图片变化成克苏鲁形状以躲过小处男审核">
+            图片混淆器
+        </a>
+        <a href="https://shiomi.xyz/freecell/" target="_blank" class="glass-btn" data-desc="111">
+            空当接龙？
+        </a>
+        <a href="https://shiomi.xyz/ciallo/" target="_blank" class="glass-btn" data-desc="没有！">
+            向您身边的朋友致以亲切的问候
+        </a>
+        <a href="https://shiomi.xyz/homo/" target="_blank" class="glass-btn" data-desc="如题(凑数用的)">
+            114514论证器
+        </a>
+    </div>
+
+    <footer>
+        棍ICP备12306号
+    </footer>
 </body>
 </html>
