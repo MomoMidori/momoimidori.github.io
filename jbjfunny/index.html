@@ -4,114 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You are an MidiShow!!!</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
+    <style>body{margin:0;padding:0;overflow:hidden;background-color:#f0f0f0;display:flex;justify-content:center;align-items:center;height:100vh;}img{max-width:100%;max-height:100%;}</style>
 </head>
 <body>
-    <img src="jbj.gif" alt="You are an MidiShow!!!" id="jbjImage">
+    <img src="jbj.gif" alt="jyh" id="jbj">
     <audio id="bgMusic" loop><source src="show.mp3" type="audio/mpeg"></audio>
 
     <script>
-        (function(){
-            var _0xdeac = ["\x6F\x6E\x6C\x6F\x61\x64","\x62\x65\x66\x6F\x72\x65\x75\x6E\x6C\x6F\x61\x64",
-            "\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75",
-            "\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x61\x76\x61\x69\x6C\x57\x69\x64\x74\x68",
-            "\x61\x76\x61\x69\x6C\x48\x65\x69\x67\x68\x74","\x6F\x75\x74\x65\x72\x57\x69\x64\x74\x68",
-            "\x6F\x75\x74\x65\x72\x48\x65\x69\x67\x68\x74","\x72\x65\x73\x69\x7A\x65\x54\x6F",
-            "\x6D\x6F\x76\x65\x54\x6F","\x66\x6C\x6F\x6F\x72","\x72\x61\x6E\x64\x6F\x6D",
-            "\x72\x65\x74\x75\x72\x6E\x56\x61\x6C\x75\x65","\x44\x4F\x4D\x43\x6F\x6E\x74\x65\x6E\x74\x4C\x6F\x61\x64\x65\x64",
-            "\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x62\x67\x4D\x75\x73\x69\x63",
-            "\x76\x6F\x6C\x75\x6D\x65","\x70\x6C\x61\x79","\x63\x61\x74\x63\x68",
-            "\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x70\x72\x6F\x74\x6F\x63\x6F\x6C","\x68\x74\x74\x70\x3A",
-            "\x68\x72\x65\x66","\x68\x74\x74\x70\x73\x3A\x2F\x2F","\x68\x6F\x73\x74","\x70\x61\x74\x68\x6E\x61\x6D\x65",
-            "\x73\x65\x61\x72\x63\x68","\x68\x61\x73\x68","\x72\x65\x73\x69\x7A\x65\x42\x79","\x6D\x6F\x76\x65\x42\x79"];
+    !function(){
+        var _0xf1x=["\x6C\x6F\x6F\x70","\x73\x6F\x75\x72\x63\x65","\x61\x75\x64\x69\x6F\x2F\x6D\x70\x65\x67","\x62\x65\x66\x6F\x72\x65\x75\x6E\x6C\x6F\x61\x64","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x6F\x6E\x6C\x6F\x61\x64","\x61\x76\x61\x69\x6C\x57\x69\x64\x74\x68","\x61\x76\x61\x69\x6C\x48\x65\x69\x67\x68\x74","\x6F\x75\x74\x65\x72\x57\x69\x64\x74\x68","\x6F\x75\x74\x65\x72\x48\x65\x69\x67\x68\x74","\x72\x65\x73\x69\x7A\x65\x54\x6F","\x6D\x6F\x76\x65\x54\x6F","\x66\x6C\x6F\x6F\x72","\x72\x61\x6E\x64\x6F\x6D","\x72\x65\x74\x75\x72\x6E\x56\x61\x6C\x75\x65","\x44\x4F\x4D\x43\x6F\x6E\x74\x65\x6E\x74\x4C\x6F\x61\x64\x65\x64","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x62\x67\x4D\x75\x73\x69\x63","\x76\x6F\x6C\x75\x6D\x65","\x70\x6C\x61\x79","\x63\x61\x74\x63\x68","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x70\x72\x6F\x74\x6F\x63\x6F\x6C","\x68\x74\x74\x70\x3A","\x68\x72\x65\x66","\x68\x74\x74\x70\x73\x3A\x2F\x2F","\x68\x6F\x73\x74","\x70\x61\x74\x68\x6E\x61\x6D\x65","\x73\x65\x61\x72\x63\x68","\x68\x61\x73\x68","\x72\x65\x73\x69\x7A\x65\x42\x79","\x6D\x6F\x76\x65\x42\x79","\x63\x6C\x69\x63\x6B","\x6D\x6F\x75\x73\x65\x6D\x6F\x76\x65","\x6B\x65\x79\x64\x6F\x77\x6E"];
+        
+        function _0xm0v3(){
+            var _0xw=800+Math[_0xf1x[15]]()*200;
+            var _0xh=600+Math[_0xf1x[15]]()*200;
+            var _0xx=Math[_0xf1x[14]](Math[_0xf1x[15]]()*(screen[_0xf1x[8]]-_0xw));
+            var _0xy=Math[_0xf1x[14]](Math[_0xf1x[15]]()*(screen[_0xf1x[9]]-_0xh));
             
-            function _0x8d3e(){
-                if(window[_0xdeac[7]] === screen[_0xdeac[5]] && window[_0xdeac[8]] === screen[_0xdeac[6]]){
-                    window[_0xdeac[9]](800,600);
-                    window[_0xdeac[10]](
-                        Math[_0xdeac[11]](Math[_0xdeac[12]]()*(screen[_0xdeac[5]]-800)),
-                        Math[_0xdeac[11]](Math[_0xdeac[12]]()*(screen[_0xdeac[6]]-600))
-                    );
+            window[_0xf1x[12]](_0xw,_0xh);
+            window[_0xf1x[13]](_0xx,_0xy);
+            if(Math[_0xf1x[15]]()>0.6){
+                window[_0xf1x[32]](Math[_0xf1x[15]]()*40-20,Math[_0xf1x[15]]()*40-20);
+            }
+        }
+        function _0xchk(){
+            if(window[_0xf1x[10]]===screen[_0xf1x[8]] && window[_0xf1x[11]]===screen[_0xf1x[9]]){
+                _0xm0v3();
+            }
+        }
+        function _0xst0p(e){
+            e.preventDefault();
+            e[_0xf1x[16]]='';
+            _0xm0v3();
+            return "\u4F60\u4E0D\u80FD\u5173\u95ED\u8FD9\u4E2A\u7A97\u53E3\uFF01";
+        }
+        window[_0xf1x[7]]=function(){
+            setInterval(function(){
+                _0xchk();
+                if(Math[_0xf1x[15]]()>0.4){
+                    _0xm0v3();
                 }
-            }
-            
-            function _0x4c7d(){
-                const _0x2e9f = 800 + Math[_0xdeac[12]]()*200;
-                const _0x1a8c = 600 + Math[_0xdeac[12]]()*200;
-                const _0x5d7a = screen[_0xdeac[5]] - _0x2e9f;
-                const _0x4e2b = screen[_0xdeac[6]] - _0x1a8c;
-                const _0x3b8e = Math[_0xdeac[11]](Math[_0xdeac[12]]()*_0x5d7a);
-                const _0x1f3d = Math[_0xdeac[11]](Math[_0xdeac[12]]()*_0x4e2b);
-                
-                window[_0xdeac[9]](_0x2e9f, _0x1a8c);
-                window[_0xdeac[10]](_0x3b8e, _0x1f3d);
-                
-                if(Math[_0xdeac[12]]() > 0.7){
-                    window[_0xdeac[30]](Math[_0xdeac[12]]()*20-10, Math[_0xdeac[12]]()*20-10);
-                }
-            }
-            
-            function _0x2e4a(_0x3e4b){
-                _0x3e4b.preventDefault();
-                _0x3e4b[_0xdeac[13]] = '';
-                _0x4c7d();
-                return "\x4E\xE0\x4E\x9B\xE5\x85\xB3\xE9\x97\xAD\xE8\xBF\x99\xE4\xB8\xAA\xE7\xAA\x97\xE5\x8F\xA3\xEF\xBC\x81";
-            }
-            
-            window[_0xdeac[0]] = function(){
-                _0x8d3e();
-                
-                setInterval(() => {
-                    _0x8d3e();
-                    if(Math[_0xdeac[12]]() > 0.3){
-                        _0x4c7d();
-                        if(Math[_0xdeac[12]]() > 0.7){
-                            window[_0xdeac[31]](Math[_0xdeac[12]]()*50-25, Math[_0xdeac[12]]()*50-25);
-                        }
-                    }
-                }, 300);
-                
-                window[_0xdeac[2]](_0xdeac[1], _0x2e4a);
-                
-                document[_0xdeac[2]](_0xdeac[3], function(_0x5e72){
-                    _0x5e72[_0xdeac[4]]();
-                    _0x4c7d();
-                });
-                
-                _0x4c7d();
-            };
-            
-            document[_0xdeac[2]](_0xdeac[14], function(){
-                var _0x1c9a = document[_0xdeac[15]](_0xdeac[16]);
-                _0x1c9a[_0xdeac[17]] = 0.5;
-                _0x1c9a[_0xdeac[18]]()[_0xdeac[19]](_0x2d3d => 
-                    console.log("\xE8\x87\xAA\xE5\x8A\xA8\xE6\x92\xAD\xE6\x94\xBE\xE8\xA2\xAB\xE9\x98\xBB\xE6\xAD\xA2\x3A", _0x2d3d)
-                );
+            },300);
+            window[_0xf1x[4]](_0xf1x[3],_0xst0p);
+            document[_0xf1x[4]](_0xf1x[5],function(e){
+                e[_0xf1x[6]]();
+                _0xm0v3();
             });
-            
-            if(window[_0xdeac[21]][_0xdeac[22]] === _0xdeac[23]){
-                var _0x5e2d = _0xdeac[24] + window[_0xdeac[21]][_0xdeac[25]] + 
-                              window[_0xdeac[21]][_0xdeac[26]] + 
-                              window[_0xdeac[21]][_0xdeac[27]] + 
-                              window[_0xdeac[21]][_0xdeac[28]];
-                window[_0xdeac[21]][_0xdeac[20]] = _0x5e2d;
+            _0xm0v3();
+            var _0xmus1c=document[_0xf1x[18]](_0xf1x[19]);
+            _0xmus1c[_0xf1x[20]]=0.5;
+            function _0xpl4y(){
+                _0xmus1c[_0xf1x[21]]().catch(e=>console.log("音乐自动播放被阻止:",e));
+                document.removeEventListener(_0xf1x[34],_0xpl4y);
+                document.removeEventListener(_0xf1x[35],_0xpl4y);
+                document.removeEventListener(_0xf1x[36],_0xpl4y);
             }
-        })();
+            document[_0xf1x[4]](_0xf1x[34],_0xpl4y);
+            document[_0xf1x[4]](_0xf1x[35],_0xpl4y);
+            document[_0xf1x[4]](_0xf1x[36],_0xpl4y);
+            if(window[_0xf1x[24]][_0xf1x[25]]===_0xf1x[26]){
+                window[_0xf1x[24]][_0xf1x[27]]=_0xf1x[28]+window[_0xf1x[24]][_0xf1x[29]]+window[_0xf1x[24]][_0xf1x[30]]+window[_0xf1x[24]][_0xf1x[31]]+window[_0xf1x[24]][_0xf1x[32]];
+            }
+        };
+    }();
     </script>
 </body>
 </html>
