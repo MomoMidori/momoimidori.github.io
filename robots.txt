@@ -1,0 +1,7 @@
+User-agent:*
+Disallow:/src/
+Disallow:/jbjfunny/
+Disallow:/bocchi/
+
+User-agent:BaiduSpider
+Disallow:/*
