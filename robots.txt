@@ -2,6 +2,7 @@ User-agent:*
 Disallow:/src/
 Disallow:/jbjfunny/
 Disallow:/bocchi/
+Disallow:/douga/
 
-User-agent:BaiduSpider
-Disallow:/*
+User-agent:Baiduspider
+Disallow:/
